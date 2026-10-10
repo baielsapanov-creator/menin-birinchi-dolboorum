@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PhotoGram — DEMO</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fafafa;
+  color: #222;
+}
+header {
+  background: white;
+  border-bottom: 1px solid #ddd;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+.logo { font-size: 24px; font-weight: bold; }
+.demo { color: #777; }
+main { max-width: 440px; margin: 30px auto; }
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+}
+.avatar {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, orange, #c13584);
+  display: grid;
+  place-items: center;
+  color: white;
+  font-size: 28px;
+}
+article {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 15px 0;
+}
+.post-title { padding: 14px; font-weight: bold; }
+.photo {
+  height: 300px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #91eae4, #86a8e7);
+  font-size: 95px;
+}
+.actions { padding: 15px; }
+button {
+  border: 0;
+  background: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+footer {
+  text-align: center;
+  color: gray;
+  padding: 20px;
+}
+</style>
+</head>
+<body>
+<header>
+  <span class="logo">PhotoGram</span>
+  <span class="demo">DEMO</span>
+</header>
+<main>
+  <div class="profile">
+    <div class="avatar">M</div>
+    <div>
+      <b>menin_profilim</b>
+      <p>Менин биринчи социалдык сайтым!</p>
+    </div>
+  </div>
+
+  <article>
+    <div class="post-title">menin_profilim</div>
+    <div class="photo">🏔️</div>
+    <div class="actions">
+      <button onclick="like(this)">♡</button>
+      <p>Менин биринчи постум!</p>
+    </div>
+  </article>
+
+  <article>
+    <div class="post-title">menin_profilim</div>
+    <div class="photo">🌸</div>
+    <div class="actions">
+      <button onclick="like(this)">♡</button>
+      <p>Экинчи пост!</p>
+    </div>
+  </article>
+</main>
+<footer>Окуу үчүн түзүлгөн демо-сайт</footer>
+<script>
+function like(button) {
+  button.textContent =
+    button.textContent === "♡" ? "❤️" : "♡";
+}
+</script>
+</body>
+</html>
